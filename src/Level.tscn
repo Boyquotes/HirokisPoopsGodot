@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Level.gd" type="Script" id=1]
+[ext_resource path="res://src/actors/Poop.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sky.png" type="Texture" id=3]
+[ext_resource path="res://assets/stained_glass.mp3" type="AudioStream" id=4]
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://joystick/virtual_joystick.tscn" type="PackedScene" id=6]
+[ext_resource path="res://droidsansbig.tres" type="DynamicFont" id=7]
+[ext_resource path="res://src/Pause.gd" type="Script" id=8]
+[ext_resource path="res://droidsansmedium.tres" type="DynamicFont" id=9]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+poop_scene = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10, 280 )
+
+[node name="Level Boilerplate" type="Node2D" parent="."]
+
+[node name="Background" type="CanvasLayer" parent="Level Boilerplate"]
+layer = -2
+
+[node name="TextureRect" type="TextureRect" parent="Level Boilerplate/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="borders" type="StaticBody2D" parent="Level Boilerplate/Background"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level Boilerplate/Background/borders"]
+polygon = PoolVector2Array( -64, 0, -68, 660, 1137, 672, 1062, 55, 1089, -94, -2, -8, -8, -1, 2, 0, 1024, 0, 1024, 600, 0, 600, 0, 0 )
+
+[node name="Poo Timer" type="Timer" parent="Level Boilerplate"]
+wait_time = 0.3
+autostart = true
+
+[node name="Virtual joystick" parent="Level Boilerplate" instance=ExtResource( 6 )]
+margin_left = 778.0
+margin_top = 372.0
+margin_right = 978.0
+margin_bottom = 572.0
+visibility_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="Pause Layer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 50
+
+[node name="Pause" type="Control" parent="Pause Layer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="Black Overlay" type="ColorRect" parent="Pause Layer/Pause"]
+margin_left = -18.0
+margin_top = -1.0
+margin_right = 1038.0
+margin_bottom = 634.0
+color = Color( 0, 0, 0, 0.545098 )
+
+[node name="Grid" type="VBoxContainer" parent="Pause Layer/Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.5
+margin_top = -140.0
+margin_right = 133.5
+margin_bottom = 140.0
+rect_min_size = Vector2( 100, 100 )
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="Pause Layer/Pause/Grid"]
+margin_right = 267.0
+margin_bottom = 59.0
+custom_fonts/font = ExtResource( 7 )
+text = "Paused"
+align = 1
+
+[node name="Control" type="Control" parent="Pause Layer/Pause/Grid"]
+margin_top = 69.0
+margin_right = 267.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Button" type="Button" parent="Pause Layer/Pause/Grid"]
+margin_top = 89.0
+margin_right = 267.0
+margin_bottom = 139.0
+rect_min_size = Vector2( 150, 50 )
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 9 )
+text = "Unpause"
+
+[node name="Button2" type="Button" parent="Pause Layer/Pause/Grid"]
+margin_top = 149.0
+margin_right = 267.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 150, 50 )
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 9 )
+text = "Main Menu"
+
+[node name="Button3" type="Button" parent="Pause Layer/Pause/Grid"]
+margin_top = 209.0
+margin_right = 267.0
+margin_bottom = 259.0
+rect_min_size = Vector2( 150, 50 )
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 9 )
+text = "Quit"
+
+[node name="PauseButton" type="Button" parent="Pause Layer"]
+margin_left = 817.0
+margin_top = 14.0
+margin_right = 1012.0
+margin_bottom = 74.0
+custom_fonts/font = ExtResource( 9 )
+text = "Pause"
+
+[connection signal="timeout" from="Level Boilerplate/Poo Timer" to="." method="_on_poo_timer_timeout"]
+[connection signal="pressed" from="Pause Layer/Pause/Grid/Button" to="Pause Layer/Pause" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause Layer/PauseButton" to="Pause Layer/Pause" method="_on_Button_pressed"]
