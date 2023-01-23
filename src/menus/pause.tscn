@@ -87,4 +87,5 @@ custom_fonts/font = ExtResource( 3 )
 text = "Pause"
 
 [connection signal="pressed" from="Pause Layer/Pause/Grid/Button" to="Pause Layer/Pause" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause Layer/Pause/Grid/Button3" to="Pause Layer/Pause" method="_on_Button3_pressed"]
 [connection signal="pressed" from="Pause Layer/PauseButton" to="Pause Layer/Pause" method="_on_Button_pressed"]
