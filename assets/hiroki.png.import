@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hiroki2.png-090b2c7a37fcb1ec874074ad06244ad9.stex"
+path="res://.import/hiroki.png-065879d88e94f6401d30864186a171b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hiroki2.png"
-dest_files=[ "res://.import/Hiroki2.png-090b2c7a37fcb1ec874074ad06244ad9.stex" ]
+source_file="res://assets/hiroki.png"
+dest_files=[ "res://.import/hiroki.png-065879d88e94f6401d30864186a171b0.stex" ]
 
 [params]
 

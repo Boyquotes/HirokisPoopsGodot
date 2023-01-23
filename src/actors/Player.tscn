@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/hiroki_crash.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/Hiroki2.png" type="Texture" id=3]
+[ext_resource path="res://assets/hiroki.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25, 9 )
