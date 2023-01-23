@@ -14,9 +14,8 @@ __meta__ = {
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 10, 280 )
-thirty_fps = true
 
-[node name="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="BoilerPlate" parent="." instance=ExtResource( 3 )]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
