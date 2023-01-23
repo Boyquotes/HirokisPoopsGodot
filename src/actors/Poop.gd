@@ -16,8 +16,9 @@ func _ready():
 	position.y = generator.randi_range(20, 500)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if position.x < 0:
+		queue_free()
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
