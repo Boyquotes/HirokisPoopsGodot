@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fontbig.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/menus/Pause.gd" type="Script" id=2]
+[ext_resource path="res://fontmedium.tres" type="DynamicFont" id=3]
+
+[node name="Pause" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -26, 0 )
+
+[node name="Pause Layer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 50
+
+[node name="Pause" type="Control" parent="Pause Layer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Black Overlay" type="ColorRect" parent="Pause Layer/Pause"]
+margin_left = -18.0
+margin_top = -1.0
+margin_right = 1038.0
+margin_bottom = 634.0
+color = Color( 0, 0, 0, 0.545098 )
+
+[node name="Grid" type="VBoxContainer" parent="Pause Layer/Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.5
+margin_top = -140.0
+margin_right = 133.5
+margin_bottom = 140.0
+rect_min_size = Vector2( 100, 100 )
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="Pause Layer/Pause/Grid"]
+margin_right = 267.0
+margin_bottom = 59.0
+custom_fonts/font = ExtResource( 1 )
+text = "Paused"
+align = 1
+
+[node name="Control" type="Control" parent="Pause Layer/Pause/Grid"]
+margin_top = 69.0
+margin_right = 267.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Button" type="Button" parent="Pause Layer/Pause/Grid"]
+margin_top = 89.0
+margin_right = 267.0
+margin_bottom = 139.0
+rect_min_size = Vector2( 150, 50 )
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Unpause"
+
+[node name="Button2" type="Button" parent="Pause Layer/Pause/Grid"]
+margin_top = 149.0
+margin_right = 267.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 150, 50 )
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Main Menu"
+
+[node name="Button3" type="Button" parent="Pause Layer/Pause/Grid"]
+margin_top = 209.0
+margin_right = 267.0
+margin_bottom = 259.0
+rect_min_size = Vector2( 150, 50 )
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Quit"
+
+[node name="PauseButton" type="Button" parent="Pause Layer"]
+margin_left = 817.0
+margin_top = 14.0
+margin_right = 1012.0
+margin_bottom = 74.0
+custom_fonts/font = ExtResource( 3 )
+text = "Pause"
+
+[connection signal="pressed" from="Pause Layer/Pause/Grid/Button" to="Pause Layer/Pause" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause Layer/PauseButton" to="Pause Layer/Pause" method="_on_Button_pressed"]
