@@ -9,7 +9,7 @@ var speed := 0
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	generator.randomize()
 	speed = generator.randi_range(max_speed, min_speed)
 	position.x = 1024
