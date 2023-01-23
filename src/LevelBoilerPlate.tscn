@@ -32,5 +32,6 @@ margin_left = 21.0
 margin_top = 352.0
 margin_right = 221.0
 margin_bottom = 552.0
+visibility_mode = 1
 
 [connection signal="timeout" from="Poo Timer" to="." method="_on_Poo_Timer_timeout"]
