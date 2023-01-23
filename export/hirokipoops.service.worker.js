@@ -3,7 +3,7 @@
 // that they need an Internet connection to run the project if desired.
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const CACHE_VERSION = "1674004984|129967108";
+const CACHE_VERSION = "1674014260|602014523";
 const CACHE_PREFIX = "Hiroki's Poops-sw-cache-";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 const OFFLINE_URL = "hirokipoops.offline.html";

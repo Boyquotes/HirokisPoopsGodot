@@ -1,48 +1,24 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Level.gd" type="Script" id=1]
-[ext_resource path="res://src/actors/Poop.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sky.png" type="Texture" id=3]
+[ext_resource path="res://src/LevelBoilerPlate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/stained_glass.mp3" type="AudioStream" id=4]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://joystick/virtual_joystick.tscn" type="PackedScene" id=6]
-[ext_resource path="res://droidsansbig.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fontbig.tres" type="DynamicFont" id=7]
 [ext_resource path="res://src/Pause.gd" type="Script" id=8]
-[ext_resource path="res://droidsansmedium.tres" type="DynamicFont" id=9]
+[ext_resource path="res://fontmedium.tres" type="DynamicFont" id=9]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 1 )
-poop_scene = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 10, 280 )
+thirty_fps = true
 
-[node name="Level Boilerplate" type="Node2D" parent="."]
-
-[node name="Background" type="CanvasLayer" parent="Level Boilerplate"]
-layer = -2
-
-[node name="TextureRect" type="TextureRect" parent="Level Boilerplate/Background"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 3 )
-expand = true
-
-[node name="borders" type="StaticBody2D" parent="Level Boilerplate/Background"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level Boilerplate/Background/borders"]
-polygon = PoolVector2Array( -64, 0, -68, 660, 1137, 672, 1062, 55, 1089, -94, -2, -8, -8, -1, 2, 0, 1024, 0, 1024, 600, 0, 600, 0, 0 )
-
-[node name="Poo Timer" type="Timer" parent="Level Boilerplate"]
-wait_time = 0.3
-autostart = true
-
-[node name="Virtual joystick" parent="Level Boilerplate" instance=ExtResource( 6 )]
-margin_left = 778.0
-margin_top = 372.0
-margin_right = 978.0
-margin_bottom = 572.0
-visibility_mode = 1
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
@@ -125,6 +101,5 @@ margin_bottom = 74.0
 custom_fonts/font = ExtResource( 9 )
 text = "Pause"
 
-[connection signal="timeout" from="Level Boilerplate/Poo Timer" to="." method="_on_poo_timer_timeout"]
 [connection signal="pressed" from="Pause Layer/Pause/Grid/Button" to="Pause Layer/Pause" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause Layer/PauseButton" to="Pause Layer/Pause" method="_on_Button_pressed"]
