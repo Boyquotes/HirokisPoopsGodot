@@ -18,9 +18,9 @@ func _process(delta: float) -> void:
 
 func _on_Poo_Timer_timeout() -> void:
 	var poop = poop_scene.instance()
-	add_child(poop)
+	$Poops.add_child(poop)
 
 
 func _on_Cloud_Timer_timeout() -> void:
 	var cloud = cloud_scene.instance()
-	add_child(cloud)
+	$Clouds.add_child(cloud)
