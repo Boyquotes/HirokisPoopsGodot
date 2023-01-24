@@ -2,15 +2,14 @@ extends KinematicBody2D
 
 export var speed := 11_000
 var velocity := Vector2(0, 0)
-export var thirty_fps := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if thirty_fps:
-		print("Override fps to be 30!!")
+	if OS.get_name() == "HTML5":
+		print("Override FPS to be 30!!")
 		Engine.set_target_fps(30)
 	else:
-		print("60 fps.")
+		print("60 FPS")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
