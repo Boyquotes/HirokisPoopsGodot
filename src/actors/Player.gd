@@ -10,7 +10,7 @@ func _ready():
 		print("Override fps to be 30!!")
 		Engine.set_target_fps(30)
 	else:
-		print("Proceeding normal. 60 fps.")
+		print("60 fps.")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
