@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sky.png-5f245714f6a8ddd8d2d452ade02334b8.stex"
+path="res://.import/edward.png-58636a46448fa5d70f1cc6eb23babb88.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sky.png"
-dest_files=[ "res://.import/sky.png-5f245714f6a8ddd8d2d452ade02334b8.stex" ]
+source_file="res://assets/img/edward.png"
+dest_files=[ "res://.import/edward.png-58636a46448fa5d70f1cc6eb23babb88.stex" ]
 
 [params]
 

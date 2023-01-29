@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/edward_crash.wav-674227185bb7bd0fa4b086ada404efe6.sample"
+path="res://.import/hiroki_crash.wav-e3dc63d7165e2572d878570050cb69bd.sample"
 
 [deps]
 
-source_file="res://assets/edward_crash.wav"
-dest_files=[ "res://.import/edward_crash.wav-674227185bb7bd0fa4b086ada404efe6.sample" ]
+source_file="res://assets/sfx/hiroki_crash.wav"
+dest_files=[ "res://.import/hiroki_crash.wav-e3dc63d7165e2572d878570050cb69bd.sample" ]
 
 [params]
 

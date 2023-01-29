@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/brook_crash.wav-806bc45d2995b36dc258493b50a75bee.sample"
+path="res://.import/brook_crash.wav-265de37682c8c40d4dc564d16ecbb370.sample"
 
 [deps]
 
-source_file="res://assets/brook_crash.wav"
-dest_files=[ "res://.import/brook_crash.wav-806bc45d2995b36dc258493b50a75bee.sample" ]
+source_file="res://assets/sfx/brook_crash.wav"
+dest_files=[ "res://.import/brook_crash.wav-265de37682c8c40d4dc564d16ecbb370.sample" ]
 
 [params]
 
