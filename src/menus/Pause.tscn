@@ -89,4 +89,5 @@ custom_fonts/font = ExtResource( 3 )
 text = "||"
 
 [connection signal="pressed" from="Pause Layer/Pause/Grid/Unpause" to="Pause Layer/Pause" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause Layer/Pause/Grid/Main" to="Pause Layer/Pause" method="_on_Main_pressed"]
 [connection signal="pressed" from="Pause Layer/PauseButton" to="Pause Layer/Pause" method="_on_Button_pressed"]

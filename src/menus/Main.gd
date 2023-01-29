@@ -11,4 +11,4 @@ func _on_Quit_pressed() -> void:
 
 
 func _on_Play_pressed() -> void:
-	get_tree().change_scene_to(character_select_scene)
+	get_tree().change_scene("res://src/Hiroki.tscn")

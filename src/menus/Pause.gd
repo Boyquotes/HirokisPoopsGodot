@@ -20,3 +20,8 @@ func toggle_pause():
 
 func _on_Quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_Main_pressed() -> void:
+	toggle_pause()
+	get_tree().change_scene("res://src/menus/Main.tscn")
