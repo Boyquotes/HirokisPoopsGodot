@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/keiths_piano.mp3-5ba1f9f605f80d4df8b96ae288bc28d3.mp3str"
+
+[deps]
+
+source_file="res://assets/music/keiths_piano.mp3"
+dest_files=[ "res://.import/keiths_piano.mp3-5ba1f9f605f80d4df8b96ae288bc28d3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

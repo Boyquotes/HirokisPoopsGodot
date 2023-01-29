@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/he_ll_take_care_of_the_rest.mp3-1c48ddfe50ca569e5d53071098c5daa2.mp3str"
+
+[deps]
+
+source_file="res://assets/music/he_ll_take_care_of_the_rest.mp3"
+dest_files=[ "res://.import/he_ll_take_care_of_the_rest.mp3-1c48ddfe50ca569e5d53071098c5daa2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

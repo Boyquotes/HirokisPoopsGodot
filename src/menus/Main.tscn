@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=4]
 [ext_resource path="res://src/Hiroki.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/img/title.png" type="Texture" id=6]
+[ext_resource path="res://assets/music/he_ll_take_care_of_the_rest.mp3" type="AudioStream" id=7]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -86,6 +87,10 @@ anchor_bottom = 1.0
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 7
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
 
 [connection signal="pressed" from="Grid/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Grid/Credits" to="." method="_on_Credits_pressed"]

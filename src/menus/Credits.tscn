@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/menus/Credits.gd" type="Script" id=3]
+[ext_resource path="res://assets/music/keiths_piano.mp3" type="AudioStream" id=4]
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
@@ -106,5 +107,9 @@ layer = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
