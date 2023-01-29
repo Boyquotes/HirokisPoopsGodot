@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/unless_the_lord_builds_the_house.mp3-6506b2bd2c5187508ff095a2bb8df1c0.mp3str"
+
+[deps]
+
+source_file="res://assets/music/unless_the_lord_builds_the_house.mp3"
+dest_files=[ "res://.import/unless_the_lord_builds_the_house.mp3-6506b2bd2c5187508ff095a2bb8df1c0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

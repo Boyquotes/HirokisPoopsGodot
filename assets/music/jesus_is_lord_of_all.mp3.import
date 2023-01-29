@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jesus_is_lord_of_all.mp3-c8c61252612e3f708e270a08eed9b851.mp3str"
+
+[deps]
+
+source_file="res://assets/music/jesus_is_lord_of_all.mp3"
+dest_files=[ "res://.import/jesus_is_lord_of_all.mp3-c8c61252612e3f708e270a08eed9b851.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

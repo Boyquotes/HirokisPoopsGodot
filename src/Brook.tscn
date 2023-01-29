@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/brook_crash.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/music/jesus_is_lord_of_all.mp3" type="AudioStream" id=2]
+[ext_resource path="res://src/LevelBoilerPlate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/brook.png" type="Texture" id=5]
+
+[node name="Level" type="Node2D"]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10, 280 )
+song = ExtResource( 2 )
+crash = ExtResource( 1 )
+texture = ExtResource( 5 )
+
+[node name="BoilerPlate" parent="." instance=ExtResource( 3 )]

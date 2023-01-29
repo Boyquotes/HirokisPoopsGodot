@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/edward_crash.wav-674227185bb7bd0fa4b086ada404efe6.sample"
+
+[deps]
+
+source_file="res://assets/edward_crash.wav"
+dest_files=[ "res://.import/edward_crash.wav-674227185bb7bd0fa4b086ada404efe6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

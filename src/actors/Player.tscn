@@ -3,7 +3,7 @@
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/hiroki_crash.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/hiroki.png" type="Texture" id=3]
-[ext_resource path="res://assets/stained_glass.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/music/stained_glass.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25, 9 )
@@ -12,6 +12,7 @@ extents = Vector2( 25, 9 )
 script = ExtResource( 1 )
 song = ExtResource( 4 )
 crash = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Image" type="Sprite" parent="."]
 position = Vector2( 25, 9 )
