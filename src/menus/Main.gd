@@ -13,8 +13,23 @@ func _on_Quit_pressed() -> void:
 
 
 func _on_Play_pressed() -> void:
-	get_tree().change_scene("res://src/menus/CharacterSelect.tscn")
+	pass
+	$Select/Background.visible = true
+	$Select/MainUI.visible = true
+	$Select.visible = true
 
 
 func _on_Credits_pressed() -> void:
 	get_tree().change_scene("res://src/menus/Credits.tscn")
+
+
+func _on_Hiroki_pressed() -> void:
+	get_tree().change_scene("res://src/Hiroki.tscn")
+
+
+func _on_Edward_pressed() -> void:
+	get_tree().change_scene("res://src/Edward.tscn")
+
+
+func _on_Brook_pressed() -> void:
+	get_tree().change_scene("res://src/Brook.tscn")
