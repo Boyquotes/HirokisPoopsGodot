@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/menus/Credits.gd" type="Script" id=3]
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -252.0
+margin_top = -185.0
+margin_right = 260.0
+margin_bottom = 117.0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+margin_right = 500.0
+margin_bottom = 4992.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "Credits:
+
+Concept: Real Python
+Artwork: RockGold, Jet, mak448a
+Joystick: MarcoFazioRandom
+Voices: Jet, Advisor Ivy
+SFX: Jet, mak448a
+Music: Keith Green
+Font: mak448a
+
+(c) mak448a. All rights reserved.
+
+3rd Party Licenses
+
+Virtual-Joystick-Godot:
+
+MIT License
+
+Copyright (c) 2023 mak448a
+Copyright (c) 2019 Marco F
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \"Software\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Godot Engine:
+
+MIT License
+
+Copyright (c) 2007-2022 Juan Linietsky, Ariel Manzur.
+Copyright (c) 2014-2022 Godot Engine contributors (cf. AUTHORS.md).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \"Software\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE."
+autowrap = true
+
+[node name="Back" type="Button" parent="."]
+margin_left = 385.0
+margin_top = 441.0
+margin_right = 619.0
+margin_bottom = 511.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

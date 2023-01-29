@@ -52,6 +52,7 @@ margin_left = 27.0
 margin_top = 354.0
 margin_right = 227.0
 margin_bottom = 554.0
+visibility_mode = 1
 
 [node name="Timers" type="Node2D" parent="."]
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/menus/Main.gd" type="Script" id=3]
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=4]
 [ext_resource path="res://src/Hiroki.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/img/title.png" type="Texture" id=6]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -12,6 +13,16 @@ anchor_bottom = 1.0
 theme = ExtResource( 4 )
 script = ExtResource( 3 )
 character_select_scene = ExtResource( 5 )
+
+[node name="Shadow" type="Label" parent="."]
+margin_left = 354.0
+margin_top = 150.0
+margin_right = 676.0
+margin_bottom = 226.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Hiroki's Poops"
+align = 1
 
 [node name="Grid" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -28,6 +39,7 @@ custom_constants/separation = 10
 [node name="Label" type="Label" parent="Grid"]
 margin_right = 322.0
 margin_bottom = 76.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "Hiroki's Poops"
 align = 1
@@ -65,5 +77,16 @@ mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 1 )
 text = "Quit"
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 7
+
 [connection signal="pressed" from="Grid/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Grid/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="Grid/Quit" to="." method="_on_Quit_pressed"]
