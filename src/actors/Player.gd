@@ -2,9 +2,14 @@ extends KinematicBody2D
 
 export var speed := 11_000
 var velocity := Vector2(0, 0)
+export(AudioStreamMP3) var song := load("res://assets/stained_glass.mp3")
+export(AudioStreamSample) var crash := load("res://assets/hiroki_crash.wav")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$crash.stream = crash
+	$music.stream = song
 	if OS.get_name() == "HTML5":
 		print("Override FPS to be 30!!")
 		Engine.set_target_fps(30)

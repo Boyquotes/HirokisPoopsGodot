@@ -81,16 +81,12 @@ custom_fonts/font = ExtResource( 3 )
 text = "Quit"
 
 [node name="PauseButton" type="Button" parent="Pause Layer"]
-anchor_left = 0.5
-anchor_top = 0.02
-anchor_right = 0.5
-anchor_bottom = 0.038
-margin_left = -60.0
-margin_top = 0.0719986
-margin_right = 60.0
-margin_bottom = 7.72
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 66.0
+margin_bottom = 63.0
 custom_fonts/font = ExtResource( 3 )
-text = "Pause"
+text = "||"
 
 [connection signal="pressed" from="Pause Layer/Pause/Grid/Button" to="Pause Layer/Pause" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause Layer/Pause/Grid/Button3" to="Pause Layer/Pause" method="_on_Button3_pressed"]
