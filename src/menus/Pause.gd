@@ -17,5 +17,6 @@ func toggle_pause():
 	visible = new_pause_state
 	PauseButton.visible = !new_pause_state
 
-func _on_Button3_pressed() -> void:
+
+func _on_Quit_pressed() -> void:
 	get_tree().quit()
