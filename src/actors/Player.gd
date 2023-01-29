@@ -6,9 +6,11 @@ export(AudioStreamMP3) var song := load("res://assets/music/stained_glass.mp3")
 export(AudioStreamSample) var crash := load("res://assets/sfx/hiroki_crash.wav")
 export(Texture) var texture := load("res://assets/img/hiroki.png")
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$crash.stream = crash
+	get_node("../BoilerPlate/Joystick")
 	$music.stream = song
 	$Image.texture = texture
 	if OS.get_name() == "HTML5":
