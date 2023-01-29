@@ -5,12 +5,12 @@ var velocity := Vector2(0, 0)
 export(AudioStreamMP3) var song := load("res://assets/music/stained_glass.mp3")
 export(AudioStreamSample) var crash := load("res://assets/sfx/hiroki_crash.wav")
 export(Texture) var texture := load("res://assets/img/hiroki.png")
+onready var joystick := get_node("../BoilerPlate/Joystick")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$crash.stream = crash
-	get_node("../BoilerPlate/Joystick")
 	$music.stream = song
 	$Image.texture = texture
 	if OS.get_name() == "HTML5":
@@ -35,6 +35,20 @@ func _physics_process(delta):
 		direction.y += 1
 	if Input.is_action_pressed("ui_up"):
 		direction.y -= 1
+	
+	# Fix joystick input
+	if joystick.get_output()[0] > .99500:
+		direction = Vector2.ZERO
+		direction.x += 1
+	if joystick.get_output()[0] < -.99500:
+		direction = Vector2.ZERO
+		direction.x -= 1
+	if joystick.get_output()[1] > .99500:
+		direction = Vector2.ZERO
+		direction.x += 1
+	if joystick.get_output()[1] < -.99500:
+		direction = Vector2.ZERO
+		direction.x -= 1
 	
 	velocity.x = direction.x * speed * delta
 	velocity.y = direction.y * speed * delta
