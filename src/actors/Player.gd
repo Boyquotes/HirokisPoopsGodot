@@ -45,10 +45,10 @@ func _physics_process(delta):
 		direction.x -= 1
 	if joystick.get_output()[1] > .99500:
 		direction = Vector2.ZERO
-		direction.x += 1
+		direction.y += 1
 	if joystick.get_output()[1] < -.99500:
 		direction = Vector2.ZERO
-		direction.x -= 1
+		direction.y -= 1
 	
 	velocity.x = direction.x * speed * delta
 	velocity.y = direction.y * speed * delta
