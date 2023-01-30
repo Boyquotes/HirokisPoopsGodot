@@ -42,9 +42,9 @@ custom_fonts/font = ExtResource( 7 )
 text = "0"
 align = 2
 
-[node name="borders" type="StaticBody2D" parent="."]
+[node name="Borders" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="borders"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders"]
 polygon = PoolVector2Array( -64, 0, -68, 660, 1137, 672, 1062, 55, 1089, -94, -2, -8, -8, -1, 2, 0, 1024, 0, 1024, 576, 0, 576, 0, 0 )
 
 [node name="Joystick" parent="." instance=ExtResource( 2 )]
