@@ -5,7 +5,7 @@
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=3]
 [ext_resource path="res://src/menus/Crash.gd" type="Script" id=4]
 
-[node name="Control" type="Control"]
+[node name="Crash" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
