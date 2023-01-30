@@ -13,7 +13,6 @@ func _on_Quit_pressed() -> void:
 
 
 func _on_Play_pressed() -> void:
-	pass
 	$Select/Background.visible = true
 	$Select/MainUI.visible = true
 	$Select.visible = true
