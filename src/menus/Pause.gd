@@ -1,6 +1,7 @@
 extends Control
 
 onready var PauseButton := get_node("../PauseButton")
+onready var joystick := get_node("../../../../Controls/Joystick")
 
 
 func _input(_event: InputEvent) -> void:
@@ -12,6 +13,8 @@ func _on_Button_pressed() -> void:
 
 
 func toggle_pause():
+	# Reset joystick
+	joystick._reset()
 	var new_pause_state := not get_tree().paused
 	get_tree().paused = new_pause_state
 	visible = new_pause_state

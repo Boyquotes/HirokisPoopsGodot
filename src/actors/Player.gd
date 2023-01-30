@@ -5,7 +5,7 @@ var velocity := Vector2(0, 0)
 export(AudioStreamMP3) var song := load("res://assets/music/stained_glass.mp3")
 export(AudioStreamSample) var crash := load("res://assets/sfx/hiroki_crash.wav")
 export(Texture) var texture := load("res://assets/img/hiroki.png")
-onready var joystick := get_node("../BoilerPlate/Joystick")
+onready var joystick := get_node("../BoilerPlate/Controls/Joystick")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -60,6 +60,8 @@ func hurt():
 	get_tree().paused = true
 	yield($crash, "finished")
 	get_tree().paused = false
+	# reset joystick position
+	joystick._reset()
 	globals.crash_score = get_node("../BoilerPlate/UI/ScoreLayer/Score").text
 	get_tree().change_scene("res://src/menus/Crash.tscn")
 
