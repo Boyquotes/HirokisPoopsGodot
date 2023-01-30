@@ -30,6 +30,10 @@ config/name="Hiroki's Poops"
 run/main_scene="res://src/menus/Main.tscn"
 config/icon="res://icon.svg"
 
+[autoload]
+
+globals="*res://src/globals.gd"
+
 [display]
 
 window/size/height=576

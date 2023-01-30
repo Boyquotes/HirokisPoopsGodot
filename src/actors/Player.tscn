@@ -29,6 +29,7 @@ position = Vector2( 25, 9 )
 shape = SubResource( 1 )
 
 [node name="crash" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
 stream = ExtResource( 2 )
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
