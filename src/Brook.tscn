@@ -16,5 +16,3 @@ crash = null
 texture = null
 
 [node name="BoilerPlate" parent="." instance=ExtResource( 3 )]
-
-[editable path="Player"]
