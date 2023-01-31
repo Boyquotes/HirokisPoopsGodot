@@ -11,6 +11,9 @@ __meta__ = {
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 10, 280 )
 speed = 11000
+song = null
+crash = null
+texture = null
 
 [node name="BoilerPlate" parent="." instance=ExtResource( 3 )]
 

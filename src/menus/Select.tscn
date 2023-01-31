@@ -20,6 +20,11 @@ texture = ExtResource( 3 )
 expand = true
 stretch_mode = 7
 
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.490196 )
+
 [node name="MainUI" type="CanvasLayer" parent="."]
 layer = 2
 visible = false
