@@ -95,6 +95,7 @@ stream = ExtResource( 7 )
 autoplay = true
 
 [node name="Select" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [connection signal="pressed" from="Grid/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Grid/Credits" to="." method="_on_Credits_pressed"]
