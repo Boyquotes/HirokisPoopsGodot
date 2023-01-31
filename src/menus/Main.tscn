@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Hiroki.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/img/title.png" type="Texture" id=6]
 [ext_resource path="res://assets/music/he_ll_take_care_of_the_rest.mp3" type="AudioStream" id=7]
+[ext_resource path="res://src/menus/Select.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -93,83 +94,8 @@ stretch_mode = 7
 stream = ExtResource( 7 )
 autoplay = true
 
-[node name="Select" type="Control" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = ExtResource( 4 )
-
-[node name="Background" type="CanvasLayer" parent="Select"]
-visible = false
-
-[node name="TextureRect" type="TextureRect" parent="Select/Background"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 6 )
-expand = true
-stretch_mode = 7
-
-[node name="MainUI" type="CanvasLayer" parent="Select"]
-layer = 2
-visible = false
-
-[node name="Shadow" type="Label" parent="Select/MainUI"]
-margin_left = 312.0
-margin_top = 151.0
-margin_right = 720.0
-margin_bottom = 227.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 2 )
-text = "Character Select"
-align = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Select/MainUI"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -204.0
-margin_top = -139.0
-margin_right = 204.0
-margin_bottom = 139.0
-custom_constants/separation = 10
-
-[node name="Label" type="Label" parent="Select/MainUI/VBoxContainer"]
-margin_right = 408.0
-margin_bottom = 76.0
-custom_fonts/font = ExtResource( 2 )
-text = "Character Select"
-align = 1
-
-[node name="Control" type="Control" parent="Select/MainUI/VBoxContainer"]
-margin_top = 86.0
-margin_right = 408.0
-margin_bottom = 86.0
-
-[node name="Hiroki" type="Button" parent="Select/MainUI/VBoxContainer"]
-margin_top = 96.0
-margin_right = 408.0
-margin_bottom = 144.0
-custom_fonts/font = ExtResource( 1 )
-text = "Hiroki"
-
-[node name="Edward" type="Button" parent="Select/MainUI/VBoxContainer"]
-margin_top = 154.0
-margin_right = 408.0
-margin_bottom = 202.0
-custom_fonts/font = ExtResource( 1 )
-text = "Edward"
-
-[node name="Brook" type="Button" parent="Select/MainUI/VBoxContainer"]
-margin_top = 212.0
-margin_right = 408.0
-margin_bottom = 260.0
-custom_fonts/font = ExtResource( 1 )
-text = "Brook"
+[node name="Select" parent="." instance=ExtResource( 8 )]
 
 [connection signal="pressed" from="Grid/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Grid/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="Grid/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="Select/MainUI/VBoxContainer/Hiroki" to="." method="_on_Hiroki_pressed"]
-[connection signal="pressed" from="Select/MainUI/VBoxContainer/Edward" to="." method="_on_Edward_pressed"]
-[connection signal="pressed" from="Select/MainUI/VBoxContainer/Brook" to="." method="_on_Brook_pressed"]
