@@ -50,7 +50,7 @@ align = 2
 polygon = PoolVector2Array( -64, 0, -68, 660, 1137, 672, 1062, 55, 1089, -94, -2, -8, -8, -1, 2, 0, 1024, 0, 1024, 576, 0, 576, 0, 0 )
 
 [node name="Controls" type="CanvasLayer" parent="."]
-layer = 2
+layer = 3
 
 [node name="Joystick" parent="Controls" instance=ExtResource( 2 )]
 margin_left = 27.0
@@ -60,7 +60,6 @@ margin_bottom = -22.0
 visibility_mode = 1
 
 [node name="Shoot" type="TouchScreenButton" parent="Controls"]
-visible = false
 position = Vector2( 834, 377 )
 scale = Vector2( 2.75, 2.75 )
 normal = ExtResource( 9 )
