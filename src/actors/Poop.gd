@@ -46,3 +46,4 @@ func explode(bullet):
 		$Poop.visible = false
 		exploded = false
 		bullet.queue_free()
+		globals.score += 20
