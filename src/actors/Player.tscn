@@ -40,4 +40,4 @@ stream = ExtResource( 4 )
 autoplay = true
 
 [node name="BulletSpawn" type="Position2D" parent="."]
-position = Vector2( 70, 10 )
+position = Vector2( 68, 10 )

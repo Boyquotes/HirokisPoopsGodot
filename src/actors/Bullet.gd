@@ -5,7 +5,7 @@ var speed := 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -16,7 +16,13 @@ func _physics_process(delta):
 	velocity.y = direction.y * speed * delta
 	position += velocity
 
+func _process(delta: float) -> void:
+	if position.x > 1300:
+		queue_free()
 
 func _on_Bullet_area_entered(area: Area2D) -> void:
-	area.explode()
-	queue_free()
+	if "Bullet" in str(area.name):
+		# There was a bullet
+		return
+	
+	area.explode(self)

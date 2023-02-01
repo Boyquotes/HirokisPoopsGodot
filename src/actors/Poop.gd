@@ -6,6 +6,8 @@ export var min_speed := 200
 var velocity := Vector2(0, 0)
 var generator := RandomNumberGenerator.new()
 var speed := 0
+export (PackedScene) var explosion_scene
+var exploded = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,13 +23,14 @@ func _process(delta):
 		queue_free()
 
 func _physics_process(delta):
-	var direction = Vector2.ZERO
-	
-	direction.x -= 1
-	
-	velocity.x = direction.x * speed * delta
-	velocity.y = direction.y * speed * delta
-	position += velocity
+	if exploded:
+		var direction = Vector2.ZERO
+		
+		direction.x -= 1
+		
+		velocity.x = direction.x * speed * delta
+		velocity.y = direction.y * speed * delta
+		position += velocity
 
 
 func _on_Poop_body_entered(body):
@@ -35,5 +38,11 @@ func _on_Poop_body_entered(body):
 		body.hurt()
 
 
-func explode():
-	print("i exploded")
+func explode(bullet):
+	if exploded:
+		var explosion = explosion_scene.instance()
+		$Explosions.add_child(explosion)
+		get_node(".").monitoring = false
+		$Poop.visible = false
+		exploded = false
+		bullet.queue_free()
