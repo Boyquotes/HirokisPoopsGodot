@@ -8,8 +8,8 @@
 [ext_resource path="res://src/actors/Cloud.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=7]
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=8]
-[ext_resource path="res://assets/img/portraits/edward-portrait.png" type="Texture" id=9]
-[ext_resource path="res://assets/img/portraits/hiroki-portrait.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/shootbutton2.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/shootbutton1.png" type="Texture" id=10]
 
 [node name="BoilerPlate" type="Node2D"]
 script = ExtResource( 3 )
@@ -60,10 +60,10 @@ margin_bottom = -22.0
 visibility_mode = 1
 
 [node name="Shoot" type="TouchScreenButton" parent="Controls"]
-position = Vector2( 834, 377 )
-scale = Vector2( 2.75, 2.75 )
-normal = ExtResource( 9 )
-pressed = ExtResource( 10 )
+position = Vector2( 766, 393 )
+scale = Vector2( 6.95238, 6.95238 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 9 )
 action = "shoot"
 
 [node name="Timers" type="Node2D" parent="."]
