@@ -15,6 +15,7 @@ func _ready():
 	$music.stream = song
 	$Image.texture = texture
 	globals.score = 0
+	globals.bullets = 10
 	if OS.get_name() == "HTML5":
 		print("Override FPS to be 30!!")
 		Engine.set_target_fps(30)
@@ -58,8 +59,15 @@ func _physics_process(delta):
 
 
 func _input(event: InputEvent) -> void:
+	# TODO: The touchscreen spawns mutliple bullets, stop that
 	if Input.is_action_just_pressed("shoot"):
+		shoot()
+
+func shoot():
+	if globals.bullets > 0:
 		var bullet = bullet_scene.instance()
+		globals.bullets -= 1
+		print(globals.bullets)
 		get_node("../").add_child(bullet)
 		bullet.position = $BulletSpawn.position + get_node(".").position
 

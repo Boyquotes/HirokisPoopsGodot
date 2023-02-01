@@ -22,3 +22,7 @@ func _on_Poo_Timer_timeout() -> void:
 func _on_Cloud_Timer_timeout() -> void:
 	var cloud = cloud_scene.instance()
 	$Clouds.add_child(cloud)
+
+
+func _on_Shoot_released() -> void:
+	get_node("../Player").shoot()
