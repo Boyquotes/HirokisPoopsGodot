@@ -1,8 +1,8 @@
 extends Area2D
 
 
-export var max_speed = 500
-export var min_speed = 200
+export var max_speed := 500
+export var min_speed := 200
 var velocity := Vector2(0, 0)
 var generator := RandomNumberGenerator.new()
 var speed := 0
@@ -33,3 +33,7 @@ func _physics_process(delta):
 func _on_Poop_body_entered(body):
 	if body is KinematicBody2D:
 		body.hurt()
+
+
+func explode():
+	print("i exploded")

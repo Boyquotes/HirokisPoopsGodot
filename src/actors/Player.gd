@@ -6,6 +6,7 @@ export(AudioStreamMP3) var song := load("res://assets/music/stained_glass.mp3")
 export(AudioStreamSample) var crash := load("res://assets/sfx/hiroki_crash.wav")
 export(Texture) var texture := load("res://assets/img/hiroki.png")
 onready var joystick := get_node("../BoilerPlate/Controls/Joystick")
+export (PackedScene) var bullet_scene
 
 
 # Called when the node enters the scene tree for the first time.
@@ -25,7 +26,7 @@ func _ready():
 #	pass
 
 func _physics_process(delta):
-	var direction = Vector2.ZERO
+	var direction := Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
@@ -53,6 +54,13 @@ func _physics_process(delta):
 	velocity.x = direction.x * speed * delta
 	velocity.y = direction.y * speed * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("shoot"):
+		var bullet = bullet_scene.instance()
+		get_node("../").add_child(bullet)
+		bullet.position = $BulletSpawn.position + get_node(".").position
 
 
 func hurt():
