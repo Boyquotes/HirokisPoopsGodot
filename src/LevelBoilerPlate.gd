@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	# Every single call, we need to add by a certain amount.
 	globals.score += delta * 35
 	$UI/ScoreLayer/Score.text = str(int(globals.score))
+	$UI/ScoreLayer/Bullets.text = "Bullets: " + str(globals.bullets)
 
 
 func _on_Poo_Timer_timeout() -> void:
