@@ -19,12 +19,15 @@ func _on_Brook_mouse_entered() -> void:
 
 
 func _on_Hiroki_pressed() -> void:
+	yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Hiroki.tscn")
 
 
 func _on_Edward_pressed() -> void:
+	yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Edward.tscn")
 
 
 func _on_Brook_pressed() -> void:
+	yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Brook.tscn")
