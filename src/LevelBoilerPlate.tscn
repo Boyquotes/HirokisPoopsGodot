@@ -113,7 +113,7 @@ visibility_mode = 1
 [node name="Timers" type="Node2D" parent="."]
 
 [node name="Poo Timer" type="Timer" parent="Timers"]
-wait_time = 0.3
+wait_time = 0.2
 autostart = true
 
 [node name="Cloud Timer" type="Timer" parent="Timers"]
