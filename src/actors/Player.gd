@@ -15,8 +15,10 @@ func _ready():
 	$music.stream = song
 	$Image.texture = texture
 	
+	# Reset globals
 	globals.score = 0
 	globals.bullets = 10
+	
 	if OS.get_name() == "HTML5":
 		print("Override FPS to be 30!!")
 		Engine.set_target_fps(30)
