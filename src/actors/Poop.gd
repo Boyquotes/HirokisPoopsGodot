@@ -15,7 +15,7 @@ func _ready() -> void:
 	generator.randomize()
 	speed = generator.randi_range(max_speed, min_speed)
 	position.x = 1024
-	position.y = generator.randi_range(5, 476)
+	position.y = generator.randi_range(5, 550)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
