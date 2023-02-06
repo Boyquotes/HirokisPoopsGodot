@@ -55,6 +55,39 @@ custom_fonts/font = ExtResource( 7 )
 text = "Bullets: 100"
 align = 1
 
+[node name="ExcellentLayer" type="CanvasLayer" parent="UI"]
+layer = 7
+visible = false
+
+[node name="Label2" type="Label" parent="UI/ExcellentLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.0
+margin_top = -36.0
+margin_right = 117.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Excellent!"
+
+[node name="Label" type="Label" parent="UI/ExcellentLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -114.0
+margin_top = -38.0
+margin_right = 114.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Excellent!"
+
+[node name="ExcellentTimer" type="Timer" parent="UI/ExcellentLayer"]
+wait_time = 1.2
+
 [node name="Borders" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders"]
@@ -91,6 +124,7 @@ autostart = true
 [node name="Clouds" type="CanvasLayer" parent="."]
 layer = 2
 
+[connection signal="timeout" from="UI/ExcellentLayer/ExcellentTimer" to="." method="_on_ExcellentTimer_timeout"]
 [connection signal="released" from="Controls/Shoot" to="." method="_on_Shoot_released"]
 [connection signal="timeout" from="Timers/Poo Timer" to="." method="_on_Poo_Timer_timeout"]
 [connection signal="timeout" from="Timers/Cloud Timer" to="." method="_on_Cloud_Timer_timeout"]

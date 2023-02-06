@@ -4,7 +4,6 @@ export (PackedScene) var poop_scene
 export (PackedScene) var cloud_scene
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -13,6 +12,12 @@ func _process(delta: float) -> void:
 	globals.score += delta * 35
 	$UI/ScoreLayer/Score.text = str(int(globals.score))
 	$UI/ScoreLayer/Bullets.text = "Bullets: " + str(globals.bullets)
+	
+	if not int(globals.score) % 1000 and not int(globals.score) == 0:
+		# It's a multiple!
+		$UI/ExcellentLayer.visible = true
+		$UI/ExcellentLayer/ExcellentTimer.start()
+		globals.bullets += 10
 
 
 func _on_Poo_Timer_timeout() -> void:
@@ -27,3 +32,7 @@ func _on_Cloud_Timer_timeout() -> void:
 
 func _on_Shoot_released() -> void:
 	get_node("../Player").shoot()
+
+
+func _on_ExcellentTimer_timeout() -> void:
+	$UI/ExcellentLayer.visible = false
