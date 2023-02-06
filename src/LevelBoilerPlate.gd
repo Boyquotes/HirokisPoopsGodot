@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 		$UI/ExcellentLayer/ExcellentTimer.start()
 		globals.bullets += 10
 
-
 func _on_Poo_Timer_timeout() -> void:
 	var poop = poop_scene.instance()
 	$Poops.add_child(poop)
