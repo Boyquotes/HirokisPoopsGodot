@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$VBoxContainer/Score.text += str(globals.crash_score)
+	$"%MainMenu".grab_focus()
 	
 	# Load file
 	var file = File.new()

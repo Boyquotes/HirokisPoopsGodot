@@ -71,6 +71,7 @@ https://godotengine.org/license/"
 autowrap = true
 
 [node name="Back" type="Button" parent="."]
+unique_name_in_owner = true
 margin_left = 410.0
 margin_top = 438.0
 margin_right = 592.0

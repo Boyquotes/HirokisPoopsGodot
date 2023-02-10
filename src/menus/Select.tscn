@@ -74,10 +74,13 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 
 [node name="Hiroki" type="Button" parent="MainUI"]
+unique_name_in_owner = true
 margin_left = 308.0
 margin_top = 316.0
 margin_right = 716.0
 margin_bottom = 364.0
+focus_neighbour_top = NodePath("../Brook")
+focus_neighbour_bottom = NodePath("../Edward")
 custom_fonts/font = ExtResource( 2 )
 text = "Hiroki"
 
@@ -86,6 +89,8 @@ margin_left = 308.0
 margin_top = 374.0
 margin_right = 716.0
 margin_bottom = 422.0
+focus_neighbour_top = NodePath("../Hiroki")
+focus_neighbour_bottom = NodePath("../Brook")
 custom_fonts/font = ExtResource( 2 )
 text = "Edward"
 
@@ -94,12 +99,17 @@ margin_left = 308.0
 margin_top = 432.0
 margin_right = 716.0
 margin_bottom = 480.0
+focus_neighbour_top = NodePath("../Edward")
+focus_neighbour_bottom = NodePath("../Hiroki")
 custom_fonts/font = ExtResource( 2 )
 text = "Brook"
 
-[connection signal="mouse_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_mouse_entered"]
+[connection signal="focus_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
+[connection signal="mouse_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
 [connection signal="pressed" from="MainUI/Hiroki" to="." method="_on_Hiroki_pressed"]
-[connection signal="mouse_entered" from="MainUI/Edward" to="." method="_on_Edward_mouse_entered"]
+[connection signal="focus_entered" from="MainUI/Edward" to="." method="_on_Edward_entered"]
+[connection signal="mouse_entered" from="MainUI/Edward" to="." method="_on_Edward_entered"]
 [connection signal="pressed" from="MainUI/Edward" to="." method="_on_Edward_pressed"]
-[connection signal="mouse_entered" from="MainUI/Brook" to="." method="_on_Brook_mouse_entered"]
+[connection signal="focus_entered" from="MainUI/Brook" to="." method="_on_Brook_entered"]
+[connection signal="mouse_entered" from="MainUI/Brook" to="." method="_on_Brook_entered"]
 [connection signal="pressed" from="MainUI/Brook" to="." method="_on_Brook_pressed"]

@@ -4,7 +4,7 @@ export (PackedScene) var character_select_scene
 
 
 func _ready() -> void:
-	pass
+	$Grid/Play.grab_focus()
 
 func _on_Quit_pressed() -> void:
 	if OS.get_name() == "HTML5":
@@ -16,6 +16,7 @@ func _on_Play_pressed() -> void:
 	$Select/Background.visible = true
 	$Select/MainUI.visible = true
 	$Select.visible = true
+	$Select/MainUI/Hiroki.grab_focus()
 
 
 func _on_Credits_pressed() -> void:

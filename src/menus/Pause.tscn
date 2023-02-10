@@ -54,10 +54,12 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 0, 10 )
 
 [node name="Unpause" type="Button" parent="Pause Layer/Pause/Grid"]
+unique_name_in_owner = true
 margin_top = 106.0
 margin_right = 267.0
 margin_bottom = 156.0
 rect_min_size = Vector2( 150, 50 )
+focus_neighbour_top = NodePath("../Quit")
 mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 3 )
 text = "Unpause"
@@ -76,6 +78,7 @@ margin_top = 226.0
 margin_right = 267.0
 margin_bottom = 276.0
 rect_min_size = Vector2( 150, 50 )
+focus_neighbour_bottom = NodePath("../Unpause")
 mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 3 )
 text = "Quit"
