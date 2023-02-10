@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed := 11_000
+export var speed := 184
 var velocity := Vector2(0, 0)
 export(AudioStreamMP3) var song := load("res://assets/music/stained_glass.mp3")
 export(AudioStreamSample) var crash := load("res://assets/sfx/hiroki_crash.wav")
@@ -35,6 +35,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
+		print(direction.x * speed * delta)
 	if Input.is_action_pressed("ui_left"):
 		direction.x -= 1
 	if Input.is_action_pressed("ui_down"):
@@ -56,9 +57,9 @@ func _physics_process(delta):
 		direction = Vector2.ZERO
 		direction.y -= 1
 	
-	velocity.x = direction.x * speed * delta
-	velocity.y = direction.y * speed * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity.x = direction.x * speed
+	velocity.y = direction.y * speed
+	velocity = move_and_slide(velocity)
 
 
 func _input(event: InputEvent) -> void:
