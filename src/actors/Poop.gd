@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export var max_speed := 500
+export var max_speed := 800
 export var min_speed := 200
 var velocity := Vector2(0, 0)
 var generator := RandomNumberGenerator.new()
