@@ -20,16 +20,7 @@ func _ready():
 	globals.bullets = 10
 	
 	if OS.get_name() == "HTML5":
-		#print("Override FPS to be 30!!")
 		Engine.set_target_fps(30)
-	else:
-		pass
-		#print("60 FPS")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _physics_process(delta):
 	var direction := Vector2.ZERO
