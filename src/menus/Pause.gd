@@ -5,7 +5,7 @@ onready var joystick := get_node("../../../../Controls/Joystick")
 
 
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_pressed("pause"):
+	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
 		$"%Unpause".grab_focus()
 
