@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/menus/Select.gd" type="Script" id=4]
 [ext_resource path="res://assets/img/portraits/hiroki-portrait.png" type="Texture" id=5]
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=6]
+[ext_resource path="res://assets/sfx/mario.mp3" type="AudioStream" id=7]
 
 [node name="Select" type="Control"]
 anchor_right = 1.0
@@ -32,17 +33,6 @@ color = Color( 0, 0, 0, 0.490196 )
 [node name="MainUI" type="CanvasLayer" parent="."]
 layer = 2
 visible = false
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainUI"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -204.0
-margin_top = -139.0
-margin_right = 204.0
-margin_bottom = 139.0
-custom_constants/separation = 10
 
 [node name="Shadow" type="Label" parent="MainUI"]
 margin_left = 310.0
@@ -92,6 +82,7 @@ margin_top = 374.0
 margin_right = 716.0
 margin_bottom = 422.0
 focus_neighbour_top = NodePath("../Hiroki")
+focus_neighbour_right = NodePath("../Mario")
 focus_neighbour_bottom = NodePath("../Brook")
 custom_fonts/font = ExtResource( 2 )
 text = "Edward"
@@ -106,6 +97,21 @@ focus_neighbour_bottom = NodePath("../Hiroki")
 custom_fonts/font = ExtResource( 2 )
 text = "Brook"
 
+[node name="Mario" type="Button" parent="MainUI"]
+unique_name_in_owner = true
+visible = false
+margin_left = 744.0
+margin_top = 374.0
+margin_right = 977.0
+margin_bottom = 422.0
+focus_neighbour_left = NodePath("../Edward")
+custom_fonts/font = ExtResource( 2 )
+text = "Mario"
+
+[node name="MarioSound" type="AudioStreamPlayer2D" parent="MainUI"]
+unique_name_in_owner = true
+stream = ExtResource( 7 )
+
 [connection signal="focus_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
 [connection signal="mouse_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
 [connection signal="pressed" from="MainUI/Hiroki" to="." method="_on_Hiroki_pressed"]
@@ -115,3 +121,6 @@ text = "Brook"
 [connection signal="focus_entered" from="MainUI/Brook" to="." method="_on_Brook_entered"]
 [connection signal="mouse_entered" from="MainUI/Brook" to="." method="_on_Brook_entered"]
 [connection signal="pressed" from="MainUI/Brook" to="." method="_on_Brook_pressed"]
+[connection signal="focus_entered" from="MainUI/Mario" to="." method="_on_Mario_entered"]
+[connection signal="mouse_entered" from="MainUI/Mario" to="." method="_on_Mario_entered"]
+[connection signal="pressed" from="MainUI/Mario" to="." method="_on_Mario_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mario.mp3-29fbe7b054e04790eaaa1f11874661b9.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/mario.mp3"
+dest_files=[ "res://.import/mario.mp3-29fbe7b054e04790eaaa1f11874661b9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

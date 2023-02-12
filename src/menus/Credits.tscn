@@ -23,7 +23,7 @@ margin_bottom = 117.0
 
 [node name="Label" type="Label" parent="ScrollContainer"]
 margin_right = 500.0
-margin_bottom = 2877.0
+margin_bottom = 2922.0
 rect_min_size = Vector2( 500, 0 )
 custom_colors/font_color = Color( 0.392157, 0.615686, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
@@ -32,9 +32,9 @@ text = "Credits:
 Concept: Real Python
 Artwork: RockGold, Jet, mak448a
 Joystick: MarcoFazioRandom
-Voices: Jet, Advisor Ivy
+Voices: Jet, Advisor Ivy, Chris Pratt, Charles Martinet
 SFX: Jet, mak448a, Michael Beck
-Music: Keith Green
+Music: Keith Green, Koji Kondo
 Font: mak448a
 
 (c) mak448a. All rights reserved.

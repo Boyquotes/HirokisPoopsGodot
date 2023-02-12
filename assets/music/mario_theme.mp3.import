@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mario_theme.mp3-f1f9a9770f9974e389517387eb056087.mp3str"
+
+[deps]
+
+source_file="res://assets/music/mario_theme.mp3"
+dest_files=[ "res://.import/mario_theme.mp3-f1f9a9770f9974e389517387eb056087.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
