@@ -1,6 +1,6 @@
 extends Control
 
-export (PackedScene) var character_select_scene
+export var character_select_scene: PackedScene
 
 
 func _ready() -> void:
