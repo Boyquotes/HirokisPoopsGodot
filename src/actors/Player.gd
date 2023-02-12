@@ -2,11 +2,11 @@ extends KinematicBody2D
 
 export var speed := 184
 var velocity := Vector2(0, 0)
-export(AudioStreamMP3) var song := load("res://assets/music/stained_glass.mp3")
-export(AudioStreamSample) var crash := load("res://assets/sfx/hiroki_crash.wav")
-export(Texture) var texture := load("res://assets/img/hiroki.png")
+export var song: AudioStreamMP3 = load("res://assets/music/stained_glass.mp3")
+export var crash: AudioStreamSample = load("res://assets/sfx/hiroki_crash.wav")
+export var texture: Texture = load("res://assets/img/hiroki.png")
 onready var joystick := get_node("../BoilerPlate/Controls/Joystick")
-export (PackedScene) var bullet_scene
+export var bullet_scene: PackedScene
 
 
 # Called when the node enters the scene tree for the first time.
