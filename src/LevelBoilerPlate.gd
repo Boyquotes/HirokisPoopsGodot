@@ -1,7 +1,7 @@
 extends Node2D
 
-export (PackedScene) var poop_scene
-export (PackedScene) var cloud_scene
+export var poop_scene: PackedScene
+export var cloud_scene: PackedScene
 
 
 func _ready() -> void:
