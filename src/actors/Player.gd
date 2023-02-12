@@ -70,7 +70,7 @@ func hurt():
 	get_tree().paused = true
 	yield($crash, "finished")
 	get_tree().paused = false
-	# reset joystick position
+	# Reset joystick position
 	joystick._reset()
 	globals.crash_score = get_node("../BoilerPlate/UI/ScoreLayer/Score").text
 	get_tree().change_scene("res://src/menus/Crash.tscn")
