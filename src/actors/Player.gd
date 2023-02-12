@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed := 184
+export var speed := 200
 var velocity := Vector2(0, 0)
 export var song: AudioStreamMP3 = load("res://assets/music/stained_glass.mp3")
 export var crash: AudioStreamSample = load("res://assets/sfx/hiroki_crash.wav")
