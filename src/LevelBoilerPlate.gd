@@ -5,7 +5,6 @@ export var cloud_scene: PackedScene
 var shot = false
 
 func _ready() -> void:
-	globals.score += 800
 	pass # Replace with function body.
 
 func _process(delta: float) -> void:
