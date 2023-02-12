@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/img/title.png" type="Texture" id=3]
 [ext_resource path="res://src/menus/Select.gd" type="Script" id=4]
 [ext_resource path="res://assets/img/portraits/hiroki-portrait.png" type="Texture" id=5]
+[ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=6]
 
 [node name="Select" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -446, 51 )
+theme = ExtResource( 6 )
 script = ExtResource( 4 )
 
 [node name="Background" type="CanvasLayer" parent="."]
