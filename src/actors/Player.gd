@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed := 200
+var speed := 200
 var velocity := Vector2(0, 0)
 export var song: AudioStreamMP3 = load("res://assets/music/stained_glass.mp3")
 export var crash: AudioStreamSample = load("res://assets/sfx/hiroki_crash.wav")
@@ -58,14 +58,18 @@ onready var cooldown = 0
 onready var cooldown2 = 0
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("shoot") and cooldown == 0:
-		cooldown += 1
-		shoot()
-	if cooldown > 0:
-		cooldown2 += 1
-	if cooldown > 0 and cooldown2 > 4:
-		cooldown = 0
-		cooldown2 = 0
+	if Input.is_joy_button_pressed(0, 0):
+		if Input.is_action_just_pressed("shoot") and cooldown == 0:
+			cooldown += 1
+			shoot()
+		if cooldown > 0:
+			cooldown2 += 1
+		if cooldown > 0 and cooldown2 > 3:
+			cooldown = 0
+			cooldown2 = 0
+	else:
+		if Input.is_action_just_pressed("shoot"):
+			shoot()
 
 func shoot():
 	if globals.bullets > 0:
