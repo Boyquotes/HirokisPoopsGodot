@@ -18,9 +18,9 @@ script = ExtResource( 3 )
 character_select_scene = ExtResource( 5 )
 
 [node name="Shadow" type="Label" parent="."]
-margin_left = 354.0
+margin_left = 353.0
 margin_top = 150.0
-margin_right = 676.0
+margin_right = 675.0
 margin_bottom = 226.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
