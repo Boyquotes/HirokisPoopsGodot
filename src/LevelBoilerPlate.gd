@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 	$UI/ScoreLayer/Score.text = str(int(globals.score))
 	$UI/ScoreLayer/Bullets.text = "Bullets: " + str(globals.bullets)
 	
-	# FIXME: THIS IS BROKEN LOL FOR JOYSTICKS
 	if not int(globals.score) % 1000 and not int(globals.score) == 0:
 		# It's a multiple!
 		$UI/ExcellentLayer.visible = true
