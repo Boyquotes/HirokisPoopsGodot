@@ -53,9 +53,19 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 
 
+# Cool down variables for joystick not repeating
+onready var cooldown = 0
+onready var cooldown2 = 0
+
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and cooldown == 0:
+		cooldown += 1
 		shoot()
+	if cooldown > 0:
+		cooldown2 += 1
+	if cooldown > 0 and cooldown2 > 4:
+		cooldown = 0
+		cooldown2 = 0
 
 func shoot():
 	if globals.bullets > 0:
