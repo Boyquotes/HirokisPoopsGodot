@@ -31,6 +31,7 @@ color = Color( 0, 0, 0, 0.490196 )
 
 [node name="MainUI" type="CanvasLayer" parent="."]
 layer = 2
+visible = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainUI"]
 anchor_left = 0.5
