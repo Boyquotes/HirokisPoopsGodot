@@ -2,9 +2,10 @@ extends Node2D
 
 export var poop_scene: PackedScene
 export var cloud_scene: PackedScene
-
+var shot = false
 
 func _ready() -> void:
+	globals.score += 800
 	pass # Replace with function body.
 
 func _process(delta: float) -> void:
@@ -13,11 +14,17 @@ func _process(delta: float) -> void:
 	$UI/ScoreLayer/Score.text = str(int(globals.score))
 	$UI/ScoreLayer/Bullets.text = "Bullets: " + str(globals.bullets)
 	
-	if not int(globals.score) % 1000 and not int(globals.score) == 0:
+	
+	if not int(globals.score) % 1000 and not int(globals.score) == 0 and not shot:
+		shot = true
 		# It's a multiple!
+		print(globals.score)
 		$UI/ExcellentLayer.visible = true
 		$UI/ExcellentLayer/ExcellentTimer.start()
 		globals.bullets += 10
+	
+	if int(globals.score) % 1000:
+		shot = false
 
 func _on_Poo_Timer_timeout() -> void:
 	var poop = poop_scene.instance()
