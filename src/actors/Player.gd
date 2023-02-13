@@ -60,21 +60,6 @@ func _physics_process(delta):
 onready var cooldown = 0
 onready var cooldown2 = 0
 
-func _input(event: InputEvent) -> void:
-	# JUST FIX THIS LOL
-	#if Input.is_joy_button_pressed(0, 0):
-	#	if Input.is_action_just_pressed("shoot") and cooldown == 0:
-	#		cooldown += 1
-	#		shoot()
-	#	if cooldown > 0:
-	#		cooldown2 += 1
-	#	if cooldown > 0 and cooldown2 > 3:
-	#		cooldown = 0
-	#		cooldown2 = 0
-	#else:
-	#	if Input.is_action_just_pressed("shoot"):
-	#		shoot()
-	pass
 
 func shoot():
 	if globals.bullets > 0:

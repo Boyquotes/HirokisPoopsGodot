@@ -35,9 +35,5 @@ func _on_Cloud_Timer_timeout() -> void:
 	$Clouds.add_child(cloud)
 
 
-func _on_Shoot_released() -> void:
-	get_node("../Player").shoot()
-
-
 func _on_ExcellentTimer_timeout() -> void:
 	$UI/ExcellentLayer.visible = false

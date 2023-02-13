@@ -108,6 +108,7 @@ position = Vector2( 766, 393 )
 scale = Vector2( 6.95238, 6.95238 )
 normal = ExtResource( 10 )
 pressed = ExtResource( 9 )
+action = "shoot"
 visibility_mode = 1
 
 [node name="Timers" type="Node2D" parent="."]
@@ -125,6 +126,5 @@ autostart = true
 layer = 2
 
 [connection signal="timeout" from="UI/ExcellentLayer/ExcellentTimer" to="." method="_on_ExcellentTimer_timeout"]
-[connection signal="released" from="Controls/Shoot" to="." method="_on_Shoot_released"]
 [connection signal="timeout" from="Timers/Poo Timer" to="." method="_on_Poo_Timer_timeout"]
 [connection signal="timeout" from="Timers/Cloud Timer" to="." method="_on_Cloud_Timer_timeout"]
