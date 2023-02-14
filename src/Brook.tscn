@@ -16,5 +16,6 @@ position = Vector2( 10, 280 )
 song = ExtResource( 1 )
 crash = ExtResource( 2 )
 texture = ExtResource( 5 )
+collision = "Brook"
 
 [node name="BoilerPlate" parent="." instance=ExtResource( 3 )]

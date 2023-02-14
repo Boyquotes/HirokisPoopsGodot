@@ -8,12 +8,18 @@ export var texture: Texture = load("res://assets/img/hiroki.png")
 onready var joystick := get_node("../BoilerPlate/Controls/Joystick")
 export var bullet_scene: PackedScene
 
+export var collision := "Hiroki"
+onready var node_name = "%"+collision+"Collision"
+onready var collision_node = get_node(node_name)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$crash.stream = crash
 	$music.stream = song
 	$Image.texture = texture
+	
+	collision_node.disabled = false
 	
 	# Reset globals
 	globals.score = 0
