@@ -104,6 +104,7 @@ margin_bottom = -22.0
 visibility_mode = 1
 
 [node name="Shoot" type="TouchScreenButton" parent="Controls"]
+modulate = Color( 1, 1, 1, 0.705882 )
 position = Vector2( 766, 393 )
 scale = Vector2( 6.95238, 6.95238 )
 normal = ExtResource( 10 )
