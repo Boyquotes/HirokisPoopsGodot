@@ -78,12 +78,8 @@ func shoot():
 func hurt():
 	$crash.play()
 	get_tree().paused = true
-	yield($crash, "finished")
-	get_tree().paused = false
 	# Reset joystick position
 	joystick._reset()
 	globals.crash_score = get_node("../BoilerPlate/UI/ScoreLayer/Score").text
-	get_tree().change_scene("res://src/menus/Crash.tscn")
-
-func _on_Joystick_use_move_vector(move_vector, delta) -> void:
-	move_and_slide(move_vector * speed * delta)
+	get_node("../BoilerPlate/UI/Crash").visible = true
+	get_node("../BoilerPlate/UI/Pause").pause_mode = 0
