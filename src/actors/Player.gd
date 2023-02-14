@@ -83,4 +83,4 @@ func hurt():
 	globals.crash_score = get_node("../BoilerPlate/UI/ScoreLayer/Score").text
 	get_node("../BoilerPlate/UI/Crash").visible = true
 	get_node("../BoilerPlate/UI/Pause").pause_mode = 0
-	get_node("../BoilerPlate/UI/Crash/Crash/VBoxContainer/MainMenu").grab_focus()
+	get_node("../BoilerPlate/UI/Crash/Crash").start()

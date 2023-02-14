@@ -1,9 +1,18 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _on_MainMenu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene("res://src/menus/Main.tscn")
+
+func _on_Quit_pressed() -> void:
+	if OS.get_name() == "HTML5":
+		return
+	get_tree().quit()
+
+func start():
 	$VBoxContainer/Score.text += str(globals.crash_score)
+	$"%MainMenu".grab_focus()
 	
 	# Load file
 	var file = File.new()
@@ -28,13 +37,3 @@ func _ready() -> void:
 		file2.close()
 	else:
 		$VBoxContainer/Highscore.text += str(prev_high)
-
-
-func _on_MainMenu_pressed() -> void:
-	get_tree().paused = false
-	get_tree().change_scene("res://src/menus/Main.tscn")
-
-func _on_Quit_pressed() -> void:
-	if OS.get_name() == "HTML5":
-		return
-	get_tree().quit()
