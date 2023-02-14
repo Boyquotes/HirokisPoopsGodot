@@ -23,21 +23,25 @@ func _on_Brook_entered() -> void:
 	$MainUI/Portrait.texture = load("res://assets/img/portraits/brook-portrait.png")
 
 func _on_Hiroki_pressed() -> void:
-	yield(get_tree().create_timer(.2), "timeout")
+	if OS.get_name() == "HTML5":
+		yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Hiroki.tscn")
 
 
 func _on_Edward_pressed() -> void:
-	yield(get_tree().create_timer(.2), "timeout")
+	if OS.get_name() == "HTML5":
+		yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Edward.tscn")
 
 
 func _on_Brook_pressed() -> void:
-	yield(get_tree().create_timer(.2), "timeout")
+	if OS.get_name() == "HTML5":
+		yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Brook.tscn")
 
 func _on_Mario_pressed() -> void:
-	yield(get_tree().create_timer(.2), "timeout")
+	if OS.get_name() == "HTML5":
+		yield(get_tree().create_timer(.2), "timeout")
 	get_tree().change_scene("res://src/Mario.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:
