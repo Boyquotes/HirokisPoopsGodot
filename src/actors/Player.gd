@@ -82,5 +82,5 @@ func hurt():
 	joystick._reset()
 	globals.crash_score = get_node("../BoilerPlate/UI/ScoreLayer/Score").text
 	get_node("../BoilerPlate/UI/Crash").visible = true
-	get_node("../BoilerPlate/UI/Pause").pause_mode = 0
+	get_node("../BoilerPlate/UI/Pause").pause_mode = Node.PAUSE_MODE_INHERIT
 	get_node("../BoilerPlate/UI/Crash/Crash").start()
