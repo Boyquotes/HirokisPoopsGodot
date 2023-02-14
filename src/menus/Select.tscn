@@ -73,6 +73,7 @@ margin_right = 716.0
 margin_bottom = 364.0
 focus_neighbour_top = NodePath("../Brook")
 focus_neighbour_bottom = NodePath("../Edward")
+theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Hiroki"
 
@@ -84,6 +85,7 @@ margin_bottom = 422.0
 focus_neighbour_top = NodePath("../Hiroki")
 focus_neighbour_right = NodePath("../Mario")
 focus_neighbour_bottom = NodePath("../Brook")
+theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Edward"
 
@@ -94,6 +96,7 @@ margin_right = 716.0
 margin_bottom = 480.0
 focus_neighbour_top = NodePath("../Edward")
 focus_neighbour_bottom = NodePath("../Hiroki")
+theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Brook"
 
@@ -105,6 +108,7 @@ margin_top = 374.0
 margin_right = 977.0
 margin_bottom = 422.0
 focus_neighbour_left = NodePath("../Edward")
+theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Mario"
 

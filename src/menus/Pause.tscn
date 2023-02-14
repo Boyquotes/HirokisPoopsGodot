@@ -26,6 +26,7 @@ margin_left = -18.0
 margin_top = -1.0
 margin_right = 1038.0
 margin_bottom = 634.0
+theme = ExtResource( 4 )
 color = Color( 0, 0, 0, 0.545098 )
 
 [node name="Grid" type="VBoxContainer" parent="Pause Layer/Pause"]
@@ -43,6 +44,7 @@ custom_constants/separation = 10
 [node name="Label" type="Label" parent="Pause Layer/Pause/Grid"]
 margin_right = 267.0
 margin_bottom = 76.0
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 1 )
 text = "Paused"
 align = 1
@@ -52,6 +54,7 @@ margin_top = 86.0
 margin_right = 267.0
 margin_bottom = 96.0
 rect_min_size = Vector2( 0, 10 )
+theme = ExtResource( 4 )
 
 [node name="Unpause" type="Button" parent="Pause Layer/Pause/Grid"]
 unique_name_in_owner = true
@@ -61,6 +64,7 @@ margin_bottom = 156.0
 rect_min_size = Vector2( 150, 50 )
 focus_neighbour_top = NodePath("../Quit")
 mouse_default_cursor_shape = 2
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 3 )
 text = "Unpause"
 
@@ -70,6 +74,7 @@ margin_right = 267.0
 margin_bottom = 216.0
 rect_min_size = Vector2( 150, 50 )
 mouse_default_cursor_shape = 2
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 3 )
 text = "Main Menu"
 
@@ -80,6 +85,7 @@ margin_bottom = 276.0
 rect_min_size = Vector2( 150, 50 )
 focus_neighbour_bottom = NodePath("../Unpause")
 mouse_default_cursor_shape = 2
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 3 )
 text = "Quit"
 
@@ -88,6 +94,7 @@ margin_left = 15.0
 margin_top = 15.0
 margin_right = 66.0
 margin_bottom = 63.0
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 3 )
 text = "||"
 
