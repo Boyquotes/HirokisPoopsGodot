@@ -34,7 +34,7 @@ expand = true
 [node name="Pause" parent="UI" instance=ExtResource( 5 )]
 
 [node name="ScoreLayer" type="CanvasLayer" parent="UI"]
-layer = 30
+layer = 3
 
 [node name="Score" type="Label" parent="UI/ScoreLayer"]
 margin_left = 646.0
