@@ -3,7 +3,8 @@ extends Control
 
 onready var current := "h"
 
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
 	get_node(".").visible = false
 	$MainUI.visible = false

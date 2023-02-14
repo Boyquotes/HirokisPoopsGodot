@@ -4,8 +4,7 @@ export var poop_scene: PackedScene
 export var cloud_scene: PackedScene
 var shot = false
 
-func _ready() -> void:
-	pass # Replace with function body.
+
 
 func _process(delta: float) -> void:
 	# Every single call, we need to add by a certain amount.
