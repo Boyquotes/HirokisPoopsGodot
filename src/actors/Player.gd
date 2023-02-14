@@ -34,7 +34,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
 		direction.y -= 1
 	
-	if Input.is_action_just_released("shoot"):
+	if Input.is_action_just_pressed("shoot"):
 		shoot()
 	
 	# Fix joystick input
