@@ -6,6 +6,7 @@ export var character_select_scene: PackedScene
 func _ready() -> void:
 	$Grid/Play.grab_focus()
 
+
 func _on_Quit_pressed() -> void:
 	if OS.get_name() == "HTML5":
 		return
