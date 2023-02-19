@@ -3,16 +3,19 @@ extends Control
 
 func _on_MainMenu_pressed() -> void:
 	get_tree().paused = false
+	globals.crashed = false
 	get_tree().change_scene("res://src/menus/Main.tscn")
+
 
 func _on_Quit_pressed() -> void:
 	if OS.get_name() == "HTML5":
 		return
 	get_tree().quit()
 
+
 func start():
 	$VBoxContainer/Score.text += str(globals.crash_score)
-	$"%MainMenu".grab_focus()
+	$"%Restart".grab_focus()
 	
 	# Load file
 	var file = File.new()
@@ -37,3 +40,11 @@ func start():
 		file2.close()
 	else:
 		$VBoxContainer/Highscore.text += str(prev_high)
+
+
+func _on_Restart_pressed() -> void:
+	globals.crashed = false
+	var current_scene = get_tree().current_scene.filename
+	get_tree().paused = false
+	get_tree().change_scene(current_scene)
+	

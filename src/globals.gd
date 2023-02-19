@@ -4,6 +4,7 @@ extends Node
 var crash_score := 0
 var score: float = 0.0
 var bullets: int = 10
+var crashed: bool = false
 
 func _ready() -> void:
 	self.pause_mode = Node.PAUSE_MODE_PROCESS

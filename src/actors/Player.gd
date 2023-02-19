@@ -84,3 +84,4 @@ func hurt():
 	get_node("../BoilerPlate/UI/Crash").visible = true
 	get_node("../BoilerPlate/UI/Pause").pause_mode = Node.PAUSE_MODE_INHERIT
 	get_node("../BoilerPlate/UI/Crash/Crash").start()
+	globals.crashed = true
