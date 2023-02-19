@@ -6,7 +6,7 @@ export var min_speed := 200
 var velocity := Vector2(0, 0)
 var generator := RandomNumberGenerator.new()
 var speed := 0
-export (PackedScene) var explosion_scene
+export var explosion_scene: PackedScene
 var not_exploded = true
 
 
