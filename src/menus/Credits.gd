@@ -10,7 +10,6 @@ func _process(delta: float) -> void:
 		$"%ScrollContainer".scroll_vertical += 8
 	if Input.is_action_pressed("ui_up"):
 		$"%ScrollContainer".scroll_vertical -= 8
-	$"%ScrollContainer".scroll_vertical += 1
 
 func _on_Back_pressed() -> void:
 	get_tree().change_scene("res://src/menus/Main.tscn")
