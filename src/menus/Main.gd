@@ -10,6 +10,7 @@ func _ready() -> void:
 func _on_Quit_pressed() -> void:
 	if OS.get_name() == "HTML5":
 		return
+	
 	get_tree().quit()
 
 

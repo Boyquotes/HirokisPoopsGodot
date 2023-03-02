@@ -25,7 +25,10 @@ func _ready():
 	globals.score = 0
 	globals.bullets = 10
 	
-	if OS.get_name() == "HTML5":
+	#if OS.get_name() == "HTML5":
+	#	Engine.set_target_fps(30)
+	if OS.has_touchscreen_ui_hint():
+		# It's a touch device
 		Engine.set_target_fps(30)
 
 func _physics_process(delta):
