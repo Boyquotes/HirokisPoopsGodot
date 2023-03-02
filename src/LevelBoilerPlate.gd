@@ -22,8 +22,6 @@ func _process(delta: float) -> void:
 		
 		# We increase the difficulty by spawning poops more quickly!
 		$"%Poo Timer".wait_time -= 0.05
-		# print($"%Poo Timer".wait_time)
-		# print("Decrease the poo timer, make it more difficult!")
 	
 	if int(globals.score) % 1000:
 		shot = false
