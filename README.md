@@ -12,10 +12,6 @@ I suggest that you check out the original game and see how much it's been change
 4. [Credits](#Credits)
 5. [Licenses](#Licenses)
 
-```
-Copyright (c) 2023 mak448a, All Rights Reserved.
-```
-
 ## How to play
 
 1. Navigate the menus with the arrow keys
@@ -53,6 +49,11 @@ Copyright (c) 2023 mak448a, All Rights Reserved.
 (c) mak448a. All rights reserved.
 
 ## Licenses
+
+### Game
+```
+Copyright (c) 2023 mak448a, All Rights Reserved.
+```
 
 ### Virtual-Joystick-Godot
 ![Link](https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot)
