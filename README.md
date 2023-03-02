@@ -1,5 +1,6 @@
 # Hiroki's Poops
 
+## NOTICE: Please don't fork this repository. Read the license, please.
 Hiroki's Poops is a game where you fly around the sky and shoot poops.
 It is a heavy modification of this [pygame tutorial](https://realpython.com/pygame-a-primer/).
 It supports joysticks.
