@@ -35,20 +35,20 @@ layer = 2
 visible = false
 
 [node name="Shadow" type="Label" parent="MainUI"]
-margin_left = 310.0
-margin_top = 97.0
-margin_right = 718.0
-margin_bottom = 173.0
+margin_left = 266.0
+margin_top = 90.0
+margin_right = 779.0
+margin_bottom = 166.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "Character Select"
 align = 1
 
 [node name="Label" type="Label" parent="MainUI"]
-margin_left = 308.0
-margin_top = 95.0
-margin_right = 716.0
-margin_bottom = 171.0
+margin_left = 264.0
+margin_top = 88.0
+margin_right = 777.0
+margin_bottom = 164.0
 custom_fonts/font = ExtResource( 1 )
 text = "Character Select"
 align = 1

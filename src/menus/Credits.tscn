@@ -24,7 +24,7 @@ margin_bottom = 117.0
 
 [node name="Label" type="Label" parent="ScrollContainer"]
 margin_right = 500.0
-margin_bottom = 2922.0
+margin_bottom = 3462.0
 rect_min_size = Vector2( 500, 0 )
 custom_colors/font_color = Color( 0.392157, 0.615686, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
