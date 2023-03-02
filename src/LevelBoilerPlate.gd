@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 	if int(globals.score) % 1000:
 		shot = false
 
+
 func _on_Poo_Timer_timeout() -> void:
 	var poop = poop_scene.instance()
 	$Poops.add_child(poop)
