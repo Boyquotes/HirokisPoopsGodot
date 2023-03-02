@@ -122,6 +122,7 @@ visibility_mode = 1
 [node name="Timers" type="Node2D" parent="."]
 
 [node name="Poo Timer" type="Timer" parent="Timers"]
+unique_name_in_owner = true
 wait_time = 0.2
 autostart = true
 

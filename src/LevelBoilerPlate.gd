@@ -5,6 +5,9 @@ export var cloud_scene: PackedScene
 var shot = false
 
 
+func _ready() -> void:
+	globals.score = 900
+
 
 func _process(delta: float) -> void:
 	# Every single call, we need to add by a certain amount.
@@ -20,6 +23,11 @@ func _process(delta: float) -> void:
 		$UI/ExcellentLayer.visible = true
 		$UI/ExcellentLayer/ExcellentTimer.start()
 		globals.bullets += 10
+		
+		# We increase the difficulty by spawning poops more quickly!
+		$"%Poo Timer".wait_time -= 0.05
+		# print($"%Poo Timer".wait_time)
+		# print("Decrease the poo timer, make it more difficult!")
 	
 	if int(globals.score) % 1000:
 		shot = false
