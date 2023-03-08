@@ -28,9 +28,9 @@ I suggest that you check out the original game and see how much it's been change
 <details>
 <summary>Click to expand</summary>
 
-![](img/demo/demo1.png)
-![](img/demo/demo2.png)
-![](img/demo/demo3.png)
+![](demo/demo1.png)
+![](demo/demo2.png)
+![](demo/demo3.png)
 </details>
 
 ## Downloads
