@@ -45,16 +45,16 @@ func _physics_process(delta):
 	
 	# Fix joystick input
 	print(joystick.get_output()[0])
-	if joystick.get_output()[0] > .99600:
+	if joystick.get_output()[0] > .99500:
 		direction = Vector2.ZERO
 		direction.x += 1
-	if joystick.get_output()[0] < -.99600:
+	if joystick.get_output()[0] < -.99500:
 		direction = Vector2.ZERO
 		direction.x -= 1
-	if joystick.get_output()[1] > .99600:
+	if joystick.get_output()[1] > .99500:
 		direction = Vector2.ZERO
 		direction.y += 1
-	if joystick.get_output()[1] < -.99600:
+	if joystick.get_output()[1] < -.99500:
 		direction = Vector2.ZERO
 		direction.y -= 1
 	
