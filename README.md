@@ -39,10 +39,10 @@ I suggest that you check out the original game and see how much it's been change
 
 ## Credits
 
-- Concept: Real Python
+- Concept: ![Real Python](https://realpython.com/pygame-a-primer/)
 - Artwork: ![RockGold777](https://github.com/RockGold777), Jet, ![mak448a](https://github.com/mak448a)
 - Joystick: ![MarcoFazioRandom](https://github.com/MarcoFazioRandom)
-- Voices: Jet, Advisor Ivy, Chris Pratt, Charles Martinet
+- Voices: Jet, Advisor Ivy, ![Chris Pratt](https://en.wikipedia.org/wiki/Chris_Pratt), ![Charles Martinet](https://en.wikipedia.org/wiki/Charles_Martinet)
 - SFX: Jet, ![mak448a](https://github.com/mak448a), ![Michael Beck](https://freesound.org/people/yottasounds/sounds/232135/)
 - Music: ![Keith Green](https://en.wikipedia.org/wiki/Keith_Green), ![Koji Kondo](https://en.wikipedia.org/wiki/Koji_Kondo)
 - Font: ![mak448a](https://github.com/mak448a)
