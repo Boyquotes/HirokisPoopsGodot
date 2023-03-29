@@ -4,7 +4,7 @@ Play on [my website!](https://mak448a.github.io/HirokisPoopsGodot)
 ## NOTICE: Please do not fork this repository. Read the license.
 
 Hiroki's Poops is a game where you fly around the sky and shoot poops.
-The game started out as a heavy modification of this [pygame tutorial](https://realpython.com/pygame-a-primer/), but after a few years I ported it over to Godot Engine.
+The game started out as a heavy modification of this [pygame tutorial (run the py_tut_with_images.py script)](https://github.com/realpython/pygame-primer), but after a few years I ported it over to Godot Engine.
 I suggest that you check out the original game and see how much it's been changed!
 
 ## Table of contents
