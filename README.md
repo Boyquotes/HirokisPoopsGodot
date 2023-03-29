@@ -1,5 +1,6 @@
 # Hiroki's Poops
 
+Play on [my website!](https://mak448a.github.io/HirokisPoopsGodot)
 ## NOTICE: Please do not fork this repository. Read the license.
 
 Hiroki's Poops is a game where you fly around the sky and shoot poops.
