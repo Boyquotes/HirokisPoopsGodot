@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://assets/img/portraits/hiroki-portrait.png" type="Texture" id=5]
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=6]
 [ext_resource path="res://assets/sfx/mario.mp3" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 30 )
 
 [node name="Select" type="Control"]
 anchor_right = 1.0
@@ -116,6 +119,10 @@ text = "Mario"
 unique_name_in_owner = true
 stream = ExtResource( 7 )
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="MainUI"]
+position = Vector2( 734, 372 )
+shape = SubResource( 1 )
+
 [connection signal="focus_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
 [connection signal="mouse_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
 [connection signal="pressed" from="MainUI/Hiroki" to="." method="_on_Hiroki_pressed"]
@@ -128,3 +135,4 @@ stream = ExtResource( 7 )
 [connection signal="focus_entered" from="MainUI/Mario" to="." method="_on_Mario_entered"]
 [connection signal="mouse_entered" from="MainUI/Mario" to="." method="_on_Mario_entered"]
 [connection signal="pressed" from="MainUI/Mario" to="." method="_on_Mario_pressed"]
+[connection signal="pressed" from="MainUI/TouchScreenButton" to="." method="activate_mario"]
