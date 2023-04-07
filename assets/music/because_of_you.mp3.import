@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/because_of_you.mp3-3955d8a397299ec6b907cf1a294f72e2.mp3str"
+
+[deps]
+
+source_file="res://assets/music/because_of_you.mp3"
+dest_files=[ "res://.import/because_of_you.mp3-3955d8a397299ec6b907cf1a294f72e2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

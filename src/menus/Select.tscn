@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/themes/font_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/themes/font_medium.tres" type="DynamicFont" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/img/portraits/hiroki-portrait.png" type="Texture" id=5]
 [ext_resource path="res://src/themes/main_theme.tres" type="Theme" id=6]
 [ext_resource path="res://assets/sfx/mario.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/sfx/connah.wav" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 100, 30 )
@@ -74,6 +75,7 @@ margin_left = 308.0
 margin_top = 316.0
 margin_right = 716.0
 margin_bottom = 364.0
+focus_neighbour_left = NodePath("../Conner")
 focus_neighbour_top = NodePath("../Brook")
 focus_neighbour_bottom = NodePath("../Edward")
 theme = ExtResource( 6 )
@@ -103,6 +105,18 @@ theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Brook"
 
+[node name="Conner" type="Button" parent="MainUI"]
+unique_name_in_owner = true
+visible = false
+margin_left = 82.0
+margin_top = 315.0
+margin_right = 280.0
+margin_bottom = 363.0
+focus_neighbour_right = NodePath("../Hiroki")
+theme = ExtResource( 6 )
+custom_fonts/font = ExtResource( 2 )
+text = "Conner"
+
 [node name="Mario" type="Button" parent="MainUI"]
 unique_name_in_owner = true
 visible = false
@@ -115,12 +129,21 @@ theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Mario"
 
+[node name="ConnerSound" type="AudioStreamPlayer2D" parent="MainUI"]
+unique_name_in_owner = true
+position = Vector2( 744, 374 )
+stream = ExtResource( 8 )
+
 [node name="MarioSound" type="AudioStreamPlayer2D" parent="MainUI"]
 unique_name_in_owner = true
 stream = ExtResource( 7 )
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="MainUI"]
+[node name="MarioActivate" type="TouchScreenButton" parent="MainUI"]
 position = Vector2( 734, 372 )
+shape = SubResource( 1 )
+
+[node name="ConnerActivate" type="TouchScreenButton" parent="MainUI"]
+position = Vector2( 81, 312 )
 shape = SubResource( 1 )
 
 [connection signal="focus_entered" from="MainUI/Hiroki" to="." method="_on_Hiroki_entered"]
@@ -132,7 +155,11 @@ shape = SubResource( 1 )
 [connection signal="focus_entered" from="MainUI/Brook" to="." method="_on_Brook_entered"]
 [connection signal="mouse_entered" from="MainUI/Brook" to="." method="_on_Brook_entered"]
 [connection signal="pressed" from="MainUI/Brook" to="." method="_on_Brook_pressed"]
+[connection signal="focus_entered" from="MainUI/Conner" to="." method="_on_Conner_entered"]
+[connection signal="mouse_entered" from="MainUI/Conner" to="." method="_on_Conner_entered"]
+[connection signal="pressed" from="MainUI/Conner" to="." method="_on_Conner_pressed"]
 [connection signal="focus_entered" from="MainUI/Mario" to="." method="_on_Mario_entered"]
 [connection signal="mouse_entered" from="MainUI/Mario" to="." method="_on_Mario_entered"]
 [connection signal="pressed" from="MainUI/Mario" to="." method="_on_Mario_pressed"]
-[connection signal="pressed" from="MainUI/TouchScreenButton" to="." method="activate_mario"]
+[connection signal="pressed" from="MainUI/MarioActivate" to="." method="activate_mario"]
+[connection signal="pressed" from="MainUI/ConnerActivate" to="." method="activate_conner"]
