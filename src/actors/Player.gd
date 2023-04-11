@@ -9,7 +9,7 @@ onready var joystick := get_node("../BoilerPlate/Controls/Joystick")
 export var bullet_scene: PackedScene
 
 export var collision := "Hiroki"
-onready var node_name = "%"+collision+"Collision"
+onready var node_name = "%" + collision + "Collision"
 onready var collision_node = get_node(node_name)
 
 
@@ -44,7 +44,7 @@ func _physics_process(delta):
 		shoot()
 	
 	# Fix joystick input
-	print(joystick.get_output()[0])
+	#print(joystick.get_output()[0])
 	if joystick.get_output()[0] > .800:
 		direction = Vector2.ZERO
 		direction.x += 1

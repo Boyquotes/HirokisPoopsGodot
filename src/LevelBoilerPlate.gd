@@ -21,7 +21,10 @@ func _process(delta: float) -> void:
 		globals.bullets += 10
 		
 		# We increase the difficulty by spawning poops more quickly!
-		$"%Poo Timer".wait_time -= 0.05
+		#$"%Poo Timer".wait_time -= 0.05
+	# Fix this, please
+	print($"%Poo Timer".wait_time)
+	$"%Poo Timer".wait_time -= 0.00001
 	
 	if int(globals.score) % 1000:
 		shot = false
